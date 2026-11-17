@@ -473,11 +473,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .header__inner { height: 56px; }
   .header .btn--sm { height: 40px; padding: 0 20px; font-size: 14.5px; }
   main, .hero { flex: 1; min-height: 0; display: flex; flex-direction: column; }
-  .hero__grid { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 10px; padding: 8px 0 14px; }
-  .hero__text { --store-space: 12px; }
+  /* Symétrie :
+     - même espace entre le téléphone et le titre qu'entre le titre et les boutons (--sym) ;
+     - même espace sous l'en-tête qu'en bas de la page (--edge). */
+  .hero { --sym: 18px; --edge: clamp(16px, 5vh, 40px); --edge: clamp(16px, 5svh, 40px); }
+  /* -2px : compense l'espace vide au-dessus des lettres du titre, pour que l'écart visible soit identique */
+  .hero__grid { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: calc(var(--sym) - 2px); padding: var(--edge) 0; }
+  .hero__text { --store-space: var(--sym); }
   .store { padding: 9px; }
-  .hero__visual { flex: 1 1 0; min-height: 0; align-items: center; }
-  .hero__phone { width: auto; height: 90%; max-height: 640px; }
+  .hero__visual { flex: 1 1 0; min-height: 0; align-items: flex-end; }
+  .hero__phone { width: auto; height: 100%; max-height: 640px; }
   .hero__phone img { width: auto; height: 100%; }
 }
 
