@@ -431,6 +431,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .hero__grid { gap: 32px; padding: 28px 0 44px; }
   .hero__phone { width: min(210px, 58%); }
   .hero h1 { font-size: clamp(.8rem, 3.4vw, 1rem); line-height: 1.2; letter-spacing: -.015em; max-width: none; }
+  /* Le titre tient toujours sur exactement deux lignes */
+  .h1-part { display: block; white-space: nowrap; }
   .lead { margin-top: 16px; font-size: 16px; }
 
   /* Boutons des stores plus compacts : ils tiennent côte à côte dès 360 px */
@@ -475,7 +477,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .hero__text { --store-space: 12px; }
   .store { padding: 9px; }
   .hero__visual { flex: 1 1 0; min-height: 0; align-items: center; }
-  .hero__phone { width: auto; height: 100%; max-height: 720px; }
+  .hero__phone { width: auto; height: 90%; max-height: 640px; }
   .hero__phone img { width: auto; height: 100%; }
 }
 
