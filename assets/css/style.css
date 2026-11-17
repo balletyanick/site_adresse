@@ -96,10 +96,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  height: 60px;
-  padding: 0 24px 0 20px;
+  padding: 13px; /* même espace en haut, en bas, à gauche et à droite */
   border-radius: 16px;
-  border: 1px solid transparent;
+  border: 1.5px solid transparent;
   white-space: nowrap;
   transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
@@ -118,7 +117,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* App Store pas encore disponible : bouton en pointillés, non cliquable */
 .store--soon {
-  border: 1.5px dashed var(--line-strong);
+  border-style: dashed;
+  border-color: var(--line-strong);
   color: var(--ink-2);
   cursor: default;
 }
@@ -410,8 +410,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .container { width: calc(100% - 40px); }
   .hide-sm { display: none; }
 
-  .hero__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .store { justify-content: center; gap: 10px; height: 56px; padding: 0 12px; }
+  .hero__actions { gap: 10px; }
+  .store { gap: 10px; padding: 11px; }
   .store__logo { width: 22px; height: 22px; }
   .store__text small { font-size: 9.5px; letter-spacing: .03em; }
   .store__text strong { font-size: 16.5px; }
