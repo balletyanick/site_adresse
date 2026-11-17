@@ -430,7 +430,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
   .hero__grid { gap: 32px; padding: 28px 0 44px; }
   .hero__phone { width: min(210px, 58%); }
-  .hero h1 { font-size: clamp(1.95rem, 8.6vw, 2.6rem); max-width: none; }
+  .hero h1 { font-size: clamp(1.5rem, 6.6vw, 2rem); max-width: none; }
   .lead { margin-top: 16px; font-size: 16px; }
 
   /* Boutons des stores plus compacts : ils tiennent côte à côte dès 360 px */
@@ -470,9 +470,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .header { flex: none; }
   .header__inner { height: 64px; }
   main, .hero { flex: 1; min-height: 0; display: flex; flex-direction: column; }
-  .hero__grid { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 24px; padding: 20px 0 28px; }
+  .hero__grid { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 18px; padding: 16px 0 22px; }
   .hero__visual { flex: 1 1 0; min-height: 0; align-items: center; }
-  .hero__phone { width: auto; height: 100%; max-height: 500px; }
+  .hero__phone { width: auto; height: 100%; max-height: 640px; }
   .hero__phone img { width: auto; height: 100%; }
 }
 
