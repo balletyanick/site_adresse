@@ -1,5 +1,0 @@
-Placez ici le fichier de l'application Android, nommé exactement :
-
-    myadress.apk
-
-Les boutons « Télécharger l'application » du site pointent vers app/myadress.apk.
