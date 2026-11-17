@@ -190,18 +190,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--muted);
 }
 
+.hero__text { --store-space: 28px; }
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 38px;
+  gap: var(--store-space);
+  margin-top: var(--store-space); /* même espace au-dessus, en dessous et entre les boutons */
 }
 
 .hero__badge {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: var(--store-space);
   font-size: 15px;
   color: var(--ink-2);
 }
@@ -410,7 +412,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .container { width: calc(100% - 40px); }
   .hide-sm { display: none; }
 
-  .hero__actions { gap: 10px; }
+  .hero__text { --store-space: 24px; }
   .store { gap: 10px; padding: 11px; }
   .store__logo { width: 22px; height: 22px; }
   .store__text small { font-size: 9.5px; letter-spacing: .03em; }
