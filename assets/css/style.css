@@ -91,6 +91,43 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .btn.is-disabled:hover { background: #dedede; color: #555; box-shadow: none; cursor: default; transform: none; }
 .btn.is-disabled svg { display: none; }
 
+/* ---------- Boutons des stores (Google Play / App Store) ---------- */
+.store {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 60px;
+  padding: 0 24px 0 20px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.store__logo { width: 26px; height: 26px; flex: none; }
+.store__text { display: flex; flex-direction: column; gap: 4px; line-height: 1; text-align: left; }
+.store__text small { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; opacity: .78; }
+.store__text strong { font-size: 19px; font-weight: 600; letter-spacing: -.01em; }
+
+.store--play {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 20px 32px -12px rgba(0, 0, 0, .5);
+}
+.store--play:hover { background: #2a2a2a; box-shadow: 0 24px 36px -12px rgba(0, 0, 0, .55); }
+.store--play:active { transform: translateY(1px); }
+
+/* App Store pas encore disponible : bouton en pointillés, non cliquable */
+.store--soon {
+  border: 1.5px dashed var(--line-strong);
+  color: var(--ink-2);
+  cursor: default;
+}
+.store--soon .store__logo { opacity: .85; }
+
+/* Sur iPhone, l'APK ne sert à rien : bouton Google Play grisé (ajouté par main.js) */
+.store.is-disabled,
+.store.is-disabled:hover { opacity: .4; box-shadow: none; cursor: default; transform: none; }
+
 /* ---------- En-tête ---------- */
 .header { border-bottom: 1px solid var(--line); }
 
@@ -373,7 +410,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .container { width: calc(100% - 40px); }
   .hide-sm { display: none; }
 
-  .hero__actions .btn { width: 100%; }
+  .hero__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .store { justify-content: center; gap: 10px; height: 56px; padding: 0 12px; }
+  .store__logo { width: 22px; height: 22px; }
+  .store__text small { font-size: 9.5px; letter-spacing: .03em; }
+  .store__text strong { font-size: 16.5px; }
   .hero__stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .hero__stats strong { font-size: 20px; }
   .hero__stats span { font-size: 13.5px; }
