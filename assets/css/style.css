@@ -133,6 +133,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .header__inner {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* logo à gauche, bouton Télécharger à droite */
   gap: 32px;
   height: 86px;
 }
@@ -146,17 +147,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   letter-spacing: -.02em;
 }
 .brand svg { width: 22px; height: 22px; }
-
-.nav {
-  display: flex;
-  gap: 44px;
-  margin-left: auto;
-  margin-right: 12px;
-  font-size: 14.5px;
-  color: #4a4a4a;
-}
-.nav a { transition: color .2s ease; }
-.nav a:hover { color: var(--ink); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -399,15 +389,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
-  .nav { gap: 28px; }
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero__stats { gap: 36px; }
 }
 
 @media (max-width: 860px) {
   .page { margin: 14px; border-width: 2px; border-radius: 24px; }
-  .nav { display: none; }
-  .header__inner { height: 70px; justify-content: space-between; }
+  .header__inner { height: 70px; }
 
   /* Une seule colonne, centrée : le téléphone d'abord, puis le texte */
   .hero { background: radial-gradient(80% 40% at 50% 22%, #ffffff 0%, rgba(255, 255, 255, 0) 72%); }
